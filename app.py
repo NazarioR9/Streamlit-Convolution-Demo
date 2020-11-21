@@ -5,6 +5,9 @@ import numpy as np
 from convolution import my_convolution, read_for_conv
 
 
+IMG_PATH = 'images/'
+
+
 @st.cache
 def list_images(path=IMG_PATH, join=False):
 	imgs = os.listdir(path)
@@ -17,7 +20,6 @@ def file_selector():
 
 #************************
 
-IMG_PATH = 'images/'
 
 st.title('Convolution demos')
 st.header('Images list')
