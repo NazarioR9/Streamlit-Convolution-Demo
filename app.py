@@ -4,9 +4,6 @@ import pandas as pd
 import numpy as np
 from convolution import my_convolution, read_for_conv
 
-IMG_PATH = 'images/'
-
-st.title('Convolution demos')
 
 @st.cache
 def list_images(path=IMG_PATH, join=False):
@@ -18,9 +15,12 @@ def file_selector():
 	selected = st.selectbox('Select an image', list_images())
 	return IMG_PATH+selected
 
+#************************
 
+IMG_PATH = 'images/'
+
+st.title('Convolution demos')
 st.header('Images list')
-
 
 st.image(image=list_images(join=True), caption=list_images(), width=100)
 
